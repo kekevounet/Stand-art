@@ -19,14 +19,14 @@ export default function Footer({ouvert})
                     <hr />
                     <div className="grid w-full grid-cols-2 gap-1 h-[75%]">
                         <div className="flex flex-col items-center justify-center w-full h-full">
-                            <a href="#Accueil" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:shadow-inner hover:bg-gray-100">Accueil</a>
-                            <a href="#Vetements" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:shadow-inner hover:bg-gray-100">Vêtements</a>
-                            <a href="#Materiels" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:shadow-inner hover:bg-gray-100">Matériels</a>
+                            <a href="#Accueil" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:bg-gray-100 hover:shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]">Accueil</a>
+                            <a href="#Vetements" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:bg-gray-100 hover:shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]">Vêtements</a>
+                            <a href="#Materiels" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:bg-gray-100 hover:shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]">Matériels</a>
                         </div>
                         <div className="flex flex-col items-center justify-center w-full h-full">
-                            <a href="#Creation" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:shadow-inner hover:bg-gray-100">Création</a>
-                            <a href="#Contact" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:shadow-inner hover:bg-gray-100">Contact</a>
-                            <a href="#Propos" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:shadow-inner hover:bg-gray-100">Propos</a>
+                            <a href="#Creation" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:bg-gray-100 hover:shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]">Création</a>
+                            <a href="#Contact" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:bg-gray-100 hover:shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]">Contact</a>
+                            <a href="#Propos" className="p-3 text-lg font-bold text-black no-underline transition-all duration-200 rounded-md hover:bg-gray-100 hover:shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]">Propos</a>
                         </div>
                     </div>
                 </div>
