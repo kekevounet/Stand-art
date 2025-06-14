@@ -62,7 +62,7 @@ export default function NavBar({ ouvert, setOuvert }) {
       ${showNav ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}
       style={{ backgroundImage: `url(${FondNav})` }}
     >
-      <nav className="relative flex flex-col items-center justify-center w-[90%] h-full lg:h-20 lg:space-x-3 lg:ml-28 lg:space-y-0 lg:flex-row">
+      <nav className="relative flex flex-col items-center justify-center w-[90%] h-full lg:h-20 lg:space-x-3 lg:ml-28 lg:space-y-0 lg:flex-row mt-32 md:mt-0 lg:mt-0">
         <div className="relative flex flex-col items-center justify-center w-full h-screen space-y-0 lg:space-y-0 lg:space-x-3 lg:w-1/2 lg:ml-28 lg:flex-row">
           {navItems.map(({ label, icon }) => (
             <li key={label} className="list-none">
