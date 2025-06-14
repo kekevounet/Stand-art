@@ -49,12 +49,12 @@ export default function Accueil({ ouvert }) {
 
     return (
         <section
-            className={`flex items-center justify-center w-full lg:bg-cyan-900 h-screen ${
+            className={`flex items-center justify-center w-full lg:bg-cyan-900 h-screen -my-32 lg:-my-0 ${
                 ouvert ? 'blur lg:blur-none' : 'blur-0'
             }`}
             id="Accueil"
         >
-            <div className="relative flex items-center justify-center w-full overflow-hidden h-3/4 lg:h-full">
+            <div className="relative flex items-center justify-center w-full overflow-hidden h-1/2 lg:h-full">
 
               {/* Images */}
                 {images.map((img, index) => (
@@ -101,7 +101,7 @@ export default function Accueil({ ouvert }) {
                             key={index}
                             onClick={() => goToSlide(index)}
                             className={`w-3 h-3 rounded-full ${
-                                index === currentIndex ? 'bg-white' : 'bg-gray-400'
+                                index === currentIndex ? 'bg-cyan-700' : 'bg-gray-400'
                             }`}
                         ></button>
                     ))}

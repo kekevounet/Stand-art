@@ -102,7 +102,7 @@ export default function Vetements({ouvert}) {
 
   return (
     <div className={`flex items-center justify-center flex-col w-full py-10 ${ouvert ? 'blur lg:blur-none' : 'blur-none'}`} id='Materiels'>
-        <div className='container p-20'>
+        <div className='container'>
             <h2 className='text-center'>Matériels informatiques</h2>
             <hr />
             {/* <div className="">Matériels, consommables et accessoires informatique comme PC de bureau ou laptop, imprimantes et toner, onduleur, etc...</div>
@@ -113,7 +113,7 @@ export default function Vetements({ouvert}) {
           <div
             key={index}
             className={`flex flex-col ${
-              index % 2 === 0 ? 'lg:flex-row bg-gray-100' : 'lg:flex-row-reverse'
+              index % 2 === 0 ? 'lg:flex-row bg-cyan-50' : 'lg:flex-row-reverse'
             } items-center justify-center gap-10 lg:gap-20 w-full p-4 lg:p-5 overflow-hidden`}
           >
             {/* Image ou Carrousel */}

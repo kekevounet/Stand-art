@@ -26,15 +26,15 @@ export default function NavBar({ ouvert, setOuvert }) {
       }
     };
   
-    handleResize(); // ⬅️ Forcer une exécution au montage
+    handleResize();
     window.addEventListener('resize', handleResize);
   
     return () => window.removeEventListener('resize', handleResize);
   }, [setOuvert]);
   
     
-    const [showNav, setShowNav] = useState(false); // 🆕 Navbar visible ou pas ?
-  // Détecte le scroll Y
+    const [showNav, setShowNav] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -50,7 +50,7 @@ export default function NavBar({ ouvert, setOuvert }) {
 
   return (
     <div
-      className={`z-50 shadow-md h-screen lg:h-20 fixed flex flex-col items-center justify-center lg:flex-row transition-all duration-500 overflow-hidden bg-no-repeat bg-cover bg-center 
+      className={`z-50 shadow-md h-[120vh] lg:h-20 fixed flex flex-col items-center justify-center lg:flex-row transition-all duration-500 overflow-hidden bg-no-repeat bg-cover bg-center 
       ${ouvert ? 'lg:w-full w-1/2' : 'w-0'} 
       ${showNav ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}
       style={{ backgroundImage: `url(${FondNav})` }}
@@ -61,7 +61,7 @@ export default function NavBar({ ouvert, setOuvert }) {
             <li key={label} className="list-none">
               <a
                 href={`#${label}`}
-                className="p-4 text-lg font-bold text-white no-underline transition-all duration-200 rounded-md hover:border-b-4 hover:shadow-md shadow-[#f7f7f7] hover:bg-cyan-900"
+                className="p-4 text-lg font-bold text-white no-underline transition-all duration-200 rounded-md hover:border-b-4 hover:shadow-[0px_2px_10px_rgba(0,0,0,0.7)] hover:bg-cyan-900"
                 onClick={() => {
                   if (isMobile) setOuvert(false);
                 }}
@@ -71,15 +71,15 @@ export default function NavBar({ ouvert, setOuvert }) {
             </li>
           ))}
         </div>
-        <div className="lg:hidden">
+        {ouvert && <div className="lg:hidden">
           <i
-            className="absolute text-4xl text-white cursor-pointer top-3 right-3 fas fa-xmark lg:hidden"
+            className="fixed text-4xl text-white cursor-pointer top-5 left-5 fas fa-xmark"
             onClick={() => setOuvert(!ouvert)}
           ></i>
-        </div>
+        </div>}
       </nav>
-      <div className="flex justify-center w-[10%] h-20">
-        <motion.img src={Logo} alt="Logo" drag dragConstraints={{top:0, bottom:0, left:0, right:0}} dragElastic={1.1} className="animate-pulse cursor-pointer" />
+      <div className="lg:flex justify-center w-[10%] h-20 hidden">
+        <motion.img src={Logo} alt="Logo" drag dragConstraints={{top:0, bottom:0, left:0, right:0}} dragElastic={1.1} className="cursor-pointer animate-pulse" />
       </div>
 
       
