@@ -12,7 +12,7 @@ export default function Creation({ ouvert }) {
         'CV ou portfolio en ligne',
         '4 à 5 pages (Accueil, Contact, Activités...)',
         '1 mail personnalisé',
-        '400 000 Ar (avec cahier de charge), sinon 500 000 Ar',
+        '400 000 Ar ( cahier de charge exclus )',
         '+ 100 000 Ar pour retouches photos',
       ],
     },
@@ -25,7 +25,7 @@ export default function Creation({ ouvert }) {
         'Panier virtuel pour visualiser les commandes',
         '10 à 15 pages',
         '3 mails personnalisés',
-        '700 000 Ar (avec cahier de charge), sinon 800 000 Ar',
+        '700 000 Ar ( cahier de charge exclus )',
         '+ 200 000 Ar pour retouches photos',
       ],
     },
@@ -37,7 +37,7 @@ export default function Creation({ ouvert }) {
         'Espace client dédié',
         '15 à 20 pages',
         '3 mails personnalisés',
-        '1 200 000 Ar (avec cahier de charge), sinon 1 500 000 Ar',
+        '1 200 000 Ar ( cahier de charge exclus )',
         '+ 300 000 Ar pour retouches photos',
       ],
     },
@@ -46,9 +46,9 @@ export default function Creation({ ouvert }) {
   return (
     <section className={`w-full min-h-screen px-6 py-16 bg-gradient-to-br from-white via-cyan-50 to-white ${ouvert ? 'blur lg:blur-none' : ''}`} id="Creation">
       <div className="mx-auto mb-16 text-center max-w-7xl">
-        <h2 className="mb-4 text-4xl font-bold text-cyan-800">Nos offres de création web 💻</h2>
+        <h2 className="mb-4 text-2xl font-bold lg:text-4xl text-cyan-800">Nos offres de création web 💻</h2>
         <p className="text-lg text-gray-600">
-          Des solutions modernes, pro, et sur mesure. Livraison rapide, responsive et accompagnée ✨
+          Des solutions modernes, pro, et sur mesure. Livraison rapide, responsive et accompagnée.
         </p>
       </div>
 
@@ -69,7 +69,7 @@ export default function Creation({ ouvert }) {
             </ul>
             <a
               href={`mailto:manager.standart0306@gmail.com?subject=Je veux un site comme ${encodeURIComponent(item.title)}&body=${encodeURIComponent(`Salut,\n\nJ'aimerais créer un site comme "${item.title}".\nVoici ce que j'aime :\n- ${item.description.join('\n- ')}\n\nMerci de me contacter pour en discuter !`)}`}
-              className="py-2 font-semibold text-center text-white transition-colors duration-200 rounded-full bg-cyan-700 hover:bg-cyan-800"
+              className="py-2 font-semibold text-center text-white no-underline transition-colors duration-200 rounded-full bg-cyan-700 hover:bg-cyan-800"
             >
               Je veux ce genre site 🚀
             </a>

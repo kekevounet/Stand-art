@@ -63,7 +63,7 @@ function Banniere() {
       <motion.img
         src={Bannieres}
         alt="Bannière"
-        className="absolute object-contain w-full h-full lg:object-cover cursor-pointer"
+        className="absolute object-contain w-full h-full cursor-pointer lg:object-cover"
         drag
         dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
         dragElastic={1.1}
@@ -74,10 +74,10 @@ function Banniere() {
 
       {/* Dialog de confirmation */}
       {showDialog && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50">
-          <div className="bg-white p-6 rounded-xl shadow-xl max-w-sm w-full space-y-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+          <div className="w-full max-w-sm p-6 space-y-4 bg-white shadow-xl rounded-xl">
             <h2 className="text-lg font-semibold text-gray-800">Stand'art | Télécharger la bannière ?</h2>
-            <p className="text-sm text-gray-600">Souhaitez-vous vraiment télécharger cette image ?</p>
+            <p className="text-sm text-gray-600">Souhaitez-vous vraiment télécharger cette image pour faire une carte de visite ?</p>
             <div className="flex justify-end space-x-4">
               <button
                 onClick={() => setShowDialog(false)}
@@ -87,7 +87,7 @@ function Banniere() {
               </button>
               <button
                 onClick={handleDownload}
-                className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                className="px-4 py-2 text-sm text-white bg-blue-600 rounded hover:bg-blue-700"
               >
                 Télécharger
               </button>

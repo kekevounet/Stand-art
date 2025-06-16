@@ -140,7 +140,7 @@ export default function Vetements({ouvert}) {
             {/* Texte */}
             <motion.div className="flex flex-col items-center justify-center w-full lg:w-1/2" initial={initial1} whileInView={whileInView1} transition={transition}>
               <div className="relative flex flex-col w-full h-full max-w-xl p-2 space-y-6">
-                <p className="p-3 text-2xl font-bold text-center border-b-4 border-cyan-600">
+                <p className="p-3 text-lg font-bold text-center border-b-4 lg:text-2xl border-cyan-600">
                   {service.title}
                 </p>
                 {service.description.map((desc, i) => (

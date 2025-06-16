@@ -27,7 +27,6 @@ export default function NavBar({ ouvert, setOuvert }) {
 
     handleResize();
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, [setOuvert]);
 
@@ -35,11 +34,7 @@ export default function NavBar({ ouvert, setOuvert }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-      }
+      setShowNav(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -57,11 +52,20 @@ export default function NavBar({ ouvert, setOuvert }) {
 
   return (
     <div
-      className={`z-50 shadow-md h-[120vh] lg:h-20 fixed flex flex-col items-center justify-center lg:flex-row transition-all duration-500 overflow-hidden bg-no-repeat bg-cover bg-center 
+      className={`z-50 shadow-md h-[120vh] lg:h-20 fixed flex flex-col items-center justify-center lg:flex-row transition-all duration-500 overflow-hidden 
       ${ouvert ? 'lg:w-full w-1/2' : 'w-0'} 
       ${showNav ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}
-      style={{ backgroundImage: `url(${FondNav})` }}
     >
+      {/* FOND MOBILE (couleur) */}
+      <div className="absolute inset-0 fond lg:hidden" />
+
+      {/* FOND DESKTOP (image) */}
+      <div
+        className="absolute inset-0 hidden bg-center bg-no-repeat bg-cover lg:block"
+        style={{ backgroundImage: `url(${FondNav})` }}
+      />
+
+      {/* NAVIGATION */}
       <nav className="relative flex flex-col items-center justify-center w-[90%] h-full lg:h-20 lg:space-x-3 lg:ml-28 lg:space-y-0 lg:flex-row mt-32 md:mt-0 lg:mt-0">
         <div className="relative flex flex-col items-center justify-center w-full h-screen space-y-0 lg:space-y-0 lg:space-x-3 lg:w-1/2 lg:ml-28 lg:flex-row">
           {navItems.map(({ label, icon }) => (
@@ -79,15 +83,28 @@ export default function NavBar({ ouvert, setOuvert }) {
             </li>
           ))}
         </div>
-        {ouvert && <div className="lg:hidden">
-          <i
-            className="fixed text-4xl text-white cursor-pointer top-5 left-5 fas fa-xmark"
-            onClick={() => setOuvert(!ouvert)}
-          ></i>
-        </div>}
+
+        {/* ❌ Bouton fermeture burger (mobile) */}
+        {ouvert && (
+          <div className="lg:hidden">
+            <i
+              className="fixed text-4xl text-white cursor-pointer top-5 left-5 fas fa-xmark"
+              onClick={() => setOuvert(!ouvert)}
+            ></i>
+          </div>
+        )}
       </nav>
+
+      {/* LOGO DRAGGABLE */}
       <div className="lg:flex justify-center w-[10%] h-20 hidden">
-        <motion.img src={Logo} alt="Logo" drag dragConstraints={{top:0, bottom:0, left:0, right:0}} dragElastic={1.1} className="cursor-pointer animate-pulse" />
+        <motion.img
+          src={Logo}
+          alt="Logo"
+          drag
+          dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
+          dragElastic={1.1}
+          className="cursor-pointer animate-pulse"
+        />
       </div>
     </div>
   );

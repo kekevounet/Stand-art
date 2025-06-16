@@ -66,7 +66,7 @@ const services = [
       "Elle peut être entièrement personnalisée avec votre logo grâce à un marquage Broderie-Flex."
     ],
     details: [
-      { label: 'Marquage', value: 'Broderie-Flex' },
+      { label: 'Marquage', value: 'Broderie-Flex, DTF, sérigraphie' },
       { label: 'Couleurs', value: 'sur commande' }
     ],
     images: [tablier,tablier1,tablier2,tablier3,tablier4]
@@ -80,7 +80,7 @@ const services = [
       'Personnalisable avec votre logo ou marque.'
     ],
     details: [
-      { label: 'Marquage', value: 'Broderie-Flex' },
+      { label: 'Marquage', value: 'Broderie-Flex, DTF, sérigraphie' },
       { label: 'Couleurs', value: 'sur commande' }
     ],
     images: [demitablier,demitablier1,demitablier2,demitablier3,demitablier4]
@@ -93,7 +93,7 @@ const services = [
       "Un accessoire pratique et stylé, parfait pour les équipes et événements !"
     ],
     details: [
-      { label: 'Marquage', value: 'DTF-Flex' },
+      { label: 'Marquage', value: 'DTF-Flex, sérigraphie' },
       { label: 'Couleurs', value: 'sur commande' }
     ],
     images: [gilet, gilet1, gilet2, gilet3,gilet4]
@@ -106,7 +106,7 @@ const services = [
       'Poignets et bas en bord côte élasthanne.'
     ],
     details: [
-      { label: 'Marquage', value: 'Broderie-Flex' },
+      { label: 'Marquage', value: 'Broderie-Flex, DTF, sérigraphie' },
       { label: 'Matière', value: '100%' },
       { label: 'Couleurs', value: 'sur commande' }
     ],
@@ -121,7 +121,7 @@ const services = [
       "Disponible en différentes coupes et tailles, avec un large choix de couleurs sur commande."
     ],
     details: [
-      { label: 'Marquage', value: 'Broderie-Flex' },
+      { label: 'Marquage', value: 'Broderie-Flex, DTF, sérigraphie' },
       { label: 'Couleurs', value: 'sur commande' }
     ],
     images: [blouse,blouse1,blouse2,blouse3,blouse4]
@@ -134,7 +134,7 @@ const services = [
       "Marquage broderie-flex + coloris personnalisables disponibles."
     ],
     details: [
-      { label: 'Marquage', value: 'Broderie-Flex' },
+      { label: 'Marquage', value: 'Broderie-Flex, DTF, sérigraphie' },
       { label: 'Couleurs', value: 'sur commande' }
     ],
     images: [costume,costume1,costume2,costume3,costume4]
@@ -148,7 +148,7 @@ const services = [
       "Idéal pour les travailleurs en extérieur."
     ],
     details: [
-      { label: 'Marquage', value: 'Broderie-Flex' },
+      { label: 'Marquage', value: 'Broderie-Flex, DTF, sérigraphie' },
       { label: 'Couleurs', value: 'sur commande' },
       { label: 'Matière', value: '100% polyester' }
     ],
@@ -163,7 +163,7 @@ const services = [
       'Marquage possible côté cœur et au dos – pour un maximum de visibilité !'
     ],
     details: [
-      { label: 'Marquage', value: 'Broderie-Flex' },
+      { label: 'Marquage', value: 'Broderie-Flex, DTF, sérigraphie' },
       { label: 'Matières', value: 'Polyester, doublure nylon au choix' },
       { label: 'Couleurs', value: 'Noir' }
     ],
@@ -226,7 +226,7 @@ export default function Vetements({ouvert}) {
             {/* Texte */}
             <motion.div className="flex flex-col items-center justify-center w-full lg:w-1/2" initial={initial1} whileInView={whileInView1} transition={transition}>
               <div className="relative flex flex-col w-full h-full max-w-xl p-2 space-y-6">
-                <p className="p-3 text-2xl font-bold text-center border-b-4 border-cyan-600">
+                <p className="p-3 text-lg font-bold text-center border-b-4 lg:text-2xl border-cyan-600">
                   {service.title}
                 </p>
                 {service.description.map((desc, i) => (
