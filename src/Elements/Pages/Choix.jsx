@@ -1,6 +1,6 @@
 export default function Choix() {
     const Card = ({ icon, title, desc, color }) => (
-      <div className="flex flex-col items-center justify-start h-full p-6 text-center transition bg-white border shadow-md rounded-xl hover:shadow-xl">
+      <div className="flex flex-col items-center justify-start h-full p-6 text-center transition bg-white border shadow-md rounded-xl hover:shadow-xl" id="Choix">
         <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${color}`}>
           <i className={`fa-solid ${icon} text-white text-2xl`}></i>
         </div>
