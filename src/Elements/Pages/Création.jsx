@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 
 export default function Creation({ ouvert }) {
-  const initial = { opacity: 0, scale: 0.95 };
-  const whileInView = { opacity: 1, scale: 1, transition: { duration: 0.6 } };
+  const initial = { opacity: 0, y: 30 };
+  const whileInView = { opacity: 1, y: 0, transition: { duration: 0.6 } };
 
   const Creations = [
     {
@@ -11,7 +11,7 @@ export default function Creation({ ouvert }) {
         "Présentation d'entreprise ou de business",
         'CV ou portfolio en ligne',
         '4 à 5 pages (Accueil, Contact, Activités...)',
-        '1 mail personnalisé',
+        'Mail personnalisé',
         'À partir de 500 000 Ar',
         '+ 100 000 Ar pour retouches photos',
       ],
@@ -24,32 +24,32 @@ export default function Creation({ ouvert }) {
         'Gestion depuis un espace admin',
         'Panier virtuel pour visualiser les commandes',
         '10 à 15 pages',
-        '3 mails personnalisés',
+        'Mails personnalisés',
         'À partir de 800 000 Ar',
         '+ 200 000 Ar pour retouches photos',
       ],
     },
     {
-      title: 'Site e-commerce',
+      title: 'Application web sur mesure',
       description: [
-        'Tout le catalogue +',
-        'Commande en ligne',
-        'Espace client dédié',
-        '15 à 20 pages',
-        '3 mails personnalisés',
-        'À partir de 1 500 000 Ar',
-        '+ 300 000 Ar pour retouches photos',
+        'Fonctionnalités personnalisées',
+        'Design unique et moderne',
+        'Mails personnalisés',
+        'Compatible avec mobile, tablette et PC',
+        'Optimisé pour la performance et le SEO',
+        'Connexion sécurisée (authentification, sessions, etc.)',
+        'Interface d’administration intuitive',
+        'Maintenance et mises à jour incluses',
+        'Sur devis selon votre besoin'
       ],
     },
   ];
 
   return (
-    <section className={`w-full min-h-screen px-6 py-16 bg-gradient-to-br from-white via-cyan-50 to-white ${ouvert ? 'blur lg:blur-none' : ''}`} id="Creation">
+    <section className={`w-full min-h-screen px-6 py-16 bg-gradient-to-br from-white via-cyan-50 to-white ${ouvert ? 'blur-sm lg:blur-none' : ''}`} id="Creation">
       <div className="mx-auto mb-16 text-center max-w-7xl">
-        <h2 className="mb-4 text-2xl font-bold lg:text-4xl text-cyan-800">Nos offres de création web 💻</h2>
-        <p className="text-lg text-gray-600">
-          Des solutions modernes, pro, et sur mesure. Livraison rapide, responsive et accompagnée.
-        </p>
+        <h2 className="mb-4 text-3xl font-bold lg:text-5xl text-cyan-800">Nos Offres de Création Web</h2>
+        <p className="text-lg text-gray-600">Des solutions modernes, pro et sur mesure. Livraison rapide, responsive, et accompagnée.</p>
       </div>
 
       <div className="grid grid-cols-1 gap-10 mb-20 md:grid-cols-2 lg:grid-cols-3">
@@ -68,10 +68,10 @@ export default function Creation({ ouvert }) {
               ))}
             </ul>
             <a
-              href={`mailto:manager.standart0306@gmail.com?subject=Je veux un site comme ${encodeURIComponent(item.title)}&body=${encodeURIComponent(`Salut,\n\nJ'aimerais créer un site comme "${item.title}".\nVoici ce que j'aime :\n- ${item.description.join('\n- ')}\n\nMerci de me contacter pour en discuter !`)}`}
-              className="py-2 font-semibold text-center text-white no-underline transition-colors duration-200 rounded-full bg-cyan-700 hover:bg-cyan-800"
+              href={`mailto:manager.standart0306@gmail.com?subject=Je veux un site comme ${encodeURIComponent(item.title)}&body=${encodeURIComponent(`Salut,\n\nJ'aimerais créer un site comme \\"${item.title}\\".\nVoici ce que j'aime :\n- ${item.description.join('\n- ')}\n\nMerci de me contacter pour en discuter !`)}`}
+              className="py-2 font-semibold text-center text-white transition-colors duration-200 rounded-full bg-cyan-700 hover:bg-cyan-800"
             >
-              Je veux ce genre site 🚀
+              Je veux ce genre de site 🚀
             </a>
           </motion.div>
         ))}
@@ -83,7 +83,7 @@ export default function Creation({ ouvert }) {
         whileInView={whileInView}
         viewport={{ once: true }}
       >
-        <ul className="p-6 space-y-3 font-medium text-gray-700 shadow-lg rounded-2xl bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100">
+        <ul className="p-6 space-y-3 font-medium text-gray-700 shadow-md rounded-2xl bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100">
           <li>✅ Hébergement gratuit pendant 1 an</li>
           <li>✅ Nom de domaine & email pro offerts</li>
           <li>✅ Mises à jour gratuites tous les 6 mois</li>
@@ -91,7 +91,7 @@ export default function Creation({ ouvert }) {
           <li>✅ Livraison en moins d’une semaine</li>
           <li>✅ Abonnement annuel à moitié prix</li>
         </ul>
-        <ul className="p-6 space-y-3 font-medium text-gray-700 shadow-lg rounded-2xl bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100">
+        <ul className="p-6 space-y-3 font-medium text-gray-700 shadow-md rounded-2xl bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100">
           <li>🎨 Création de logos sur mesure</li>
           <li>📞 Assistance à distance disponible</li>
           <li>🧠 Formation bureautique (Word, Excel...)</li>

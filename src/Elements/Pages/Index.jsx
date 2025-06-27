@@ -5,6 +5,7 @@ import Accueil from "./Accueil";
 import Vetements from "./Vetements";
 import Materiels from "./Materiels";
 import Creation from "./Création";
+import Choix from "./Choix";
 import Contact from "./Contact";
 import Propos from "./Propos";
 import Bannieres from '../Assets/bannière.jpg';
@@ -29,6 +30,8 @@ function Index()
       <Materiels ouvert={ouvert}/>
       <Banniere/>
       <Creation ouvert={ouvert}/>
+      <Banniere/>
+      <Choix ouvert={ouvert}/>
       <Banniere/>
       <Contact ouvert={ouvert}/>
       <Banniere/>
