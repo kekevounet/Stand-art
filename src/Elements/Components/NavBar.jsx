@@ -69,6 +69,7 @@ export default function NavBar({ ouvert, setOuvert }) {
                 <a
                   href={`#${label}`}
                   className="p-4 text-lg font-bold text-white no-underline transition-all duration-200 rounded-md hover:border-b-4 hover:shadow-[0px_2px_10px_rgba(0,0,0,0.7)] hover:bg-cyan-900 flex items-center space-x-2"
+                  title={`${label}`}
                   onClick={() => {
                     if (isMobile) setOuvert(false);
                   }}
