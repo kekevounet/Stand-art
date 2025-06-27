@@ -78,12 +78,12 @@ export default function Creation({ ouvert }) {
       </div>
 
       <motion.div
-        className="lg:w-[90%] w-full mx-auto grid gap-10 lg:grid-cols-2"
+        className="lg:w-[50%] w-full mx-auto grid gap-10 lg:grid-cols-2"
         initial={initial}
         whileInView={whileInView}
         viewport={{ once: true }}
       >
-        <ul className="p-6 space-y-3 font-medium text-gray-700 shadow-md rounded-2xl bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100">
+        <ul className="p-6 space-y-3 font-medium text-gray-700 bg-white shadow-md rounded-2xl">
           <li>✅ Hébergement gratuit pendant 1 an</li>
           <li>✅ Nom de domaine & email pro offerts</li>
           <li>✅ Mises à jour gratuites tous les 6 mois</li>
@@ -91,7 +91,7 @@ export default function Creation({ ouvert }) {
           <li>✅ Livraison en moins d’une semaine</li>
           <li>✅ Abonnement annuel à moitié prix</li>
         </ul>
-        <ul className="p-6 space-y-3 font-medium text-gray-700 shadow-md rounded-2xl bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100">
+        <ul className="p-6 space-y-3 font-medium text-gray-700 bg-white shadow-md rounded-2xl">
           <li>🎨 Création de logos sur mesure</li>
           <li>📞 Assistance à distance disponible</li>
           <li>🧠 Formation bureautique (Word, Excel...)</li>

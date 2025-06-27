@@ -65,7 +65,12 @@ export default function NavBar({ ouvert, setOuvert }) {
         <nav className="relative flex flex-col items-center justify-start transition-all duration-500 ease-in-out w-[90%] h-full lg:h-20 lg:space-x-3 lg:ml-28 lg:space-y-0 lg:flex-row  md:mt-0 lg:mt-0">
           <div className="relative flex flex-col items-center justify-center w-full h-screen space-y-0 lg:space-y-0 lg:space-x-3 lg:w-1/2 lg:ml-28 lg:flex-row">
             {navItems.map(({ label, icon }) => (
-              <li key={label} className="list-none">
+              <motion.li 
+                key={label} 
+                className="list-none"
+                initial={{scale:1}}
+                whileTap={{scale:0.5}}
+              >
                 <a
                   href={`#${label}`}
                   className="p-4 text-lg font-bold text-white no-underline transition-all duration-200 rounded-md hover:border-b-4 hover:shadow-[0px_2px_10px_rgba(0,0,0,0.7)] hover:bg-cyan-900 flex items-center space-x-2"
@@ -77,7 +82,7 @@ export default function NavBar({ ouvert, setOuvert }) {
                   <i className={`fa-solid ${icon}`}></i>
                   <span>{label}</span>
                 </a>
-              </li>
+              </motion.li>
             ))}
           </div>
 
