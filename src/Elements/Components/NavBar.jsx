@@ -4,9 +4,9 @@ import Logo from '../Assets/logo.jpg';
 import { motion } from 'framer-motion';
 
 function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 1000);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -19,7 +19,7 @@ export default function NavBar({ ouvert, setOuvert }) {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 1000) {
         setOuvert(false);
       } else {
         setOuvert(true);
@@ -45,6 +45,7 @@ export default function NavBar({ ouvert, setOuvert }) {
     { label: 'Creation', icon: 'fa-code' },
     { label: 'Choix', icon: 'fa-circle-question' },
     { label: 'Contact', icon: 'fa-envelope' },
+    { label: 'Commander', icon: 'fa-note-sticky' },
     { label: 'Propos', icon: 'fa-user' }
   ];
 
@@ -52,7 +53,7 @@ export default function NavBar({ ouvert, setOuvert }) {
     <div
       className={`z-50 fixed top-0 left-0 w-full transition-all duration-500 ease-in-out overflow-hidden
         ${ouvert ? 'h-screen lg:h-20 opacity-100 translate-x-0' : 'h-0 opacity-0 -translate-x-full'}
-        ${showNav ? 'shadow-md' : ''}`}
+        ${showNav ? 'shadow-[0px_0px_10px_#0c53af]' : ''}`}
     >
       {/* BACKGROUND IMAGE DESKTOP */}
       <div className="absolute inset-0 hidden bg-center bg-cover lg:block" style={{ backgroundImage: `url(${FondNav})` }} />
@@ -62,8 +63,8 @@ export default function NavBar({ ouvert, setOuvert }) {
 
       <div className={`relative flex flex-col lg:flex-row items-center justify-between transition-all duration-500 ease-in-out w-full`}>
         {/* NAVIGATION LINKS */}
-        <nav className="relative flex flex-col items-center justify-start transition-all duration-500 ease-in-out w-[90%] h-full lg:h-20 lg:space-x-3 lg:ml-28 lg:space-y-0 lg:flex-row  md:mt-0 lg:mt-0">
-          <div className="relative flex flex-col items-center justify-center w-full h-screen space-y-0 lg:space-y-0 lg:space-x-3 lg:w-1/2 lg:ml-28 lg:flex-row">
+        <nav className="relative flex flex-col items-center justify-start transition-all duration-500 ease-in-out w-[100%] h-full lg:h-20 lg:space-x-3 lg:ml-36 lg:space-y-0 lg:flex-row  md:mt-0 lg:mt-0">
+          <div className="relative flex flex-col items-center justify-center w-full h-screen space-y-0 lg:space-y-0 lg:space-x-3 lg:w-1/2 lg:ml-36 lg:flex-row">
             {navItems.map(({ label, icon }) => (
               <motion.li 
                 key={label} 

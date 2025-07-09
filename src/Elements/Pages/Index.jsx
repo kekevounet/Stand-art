@@ -117,6 +117,7 @@ import Materiels from "./Materiels";
 import Creation from "./Création";
 import Choix from "./Choix";
 import Contact from "./Contact";
+import Commander from "./Commander";
 import Propos from "./Propos";
 import Bannieres from "../Assets/bannière.jpg";
 import Footer from "../Components/Footer";
@@ -144,7 +145,7 @@ function Index() {
   };
 
   return (
-    <div className="w-full h-full transition-all duration-500">
+    <div className={`w-full h-full transition-all duration-500`}>
       <NavBar ouvert={ouvert} setOuvert={setOuvert} />
       {!ouvert && (
         <div className="fixed z-40 right-5 top-5">
@@ -168,11 +169,13 @@ function Index() {
       <Banniere />
       <Contact ouvert={ouvert} />
       <Banniere />
+      <Commander ouvert={ouvert} />
+      <Banniere />
       <Propos ouvert={ouvert} />
       <Footer ouvert={ouvert} />
 
       {/* Mini Chatbot */}
-      <div className="fixed z-50 bottom-5 right-5">
+      <div className="fixed z-40 bottom-5 right-5">
         {/* Floating Button */}
         <div
           className="flex items-center justify-center p-4 transition border rounded-full shadow-lg cursor-pointer bg-cyan-900 hover:scale-105"

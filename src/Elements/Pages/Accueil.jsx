@@ -49,12 +49,13 @@ export default function Accueil({ ouvert }) {
 
     return (
         <section
-            className={`flex items-center justify-center w-full lg:bg-cyan-900 h-screen -my-32 lg:-my-0 ${
-                ouvert ? 'blur lg:blur-none' : 'blur-0'
-            }`}
+            className={`flex items-center justify-center w-full lg:bg-cyan-900 h-screen -my-24 lg:-my-0
+                ${ouvert ? 'blur lg:blur-none' : 'blur-0'}
+
+                `}
             id="Accueil"
         >
-            <div className="relative flex items-center justify-center w-full overflow-hidden h-1/2 lg:h-full">
+            <div className="relative flex items-center justify-center w-full overflow-hidden h-[60%] lg:h-full">
 
               {/* Images */}
                 {images.map((img, index) => (

@@ -1,5 +1,6 @@
+import { ImSpinner10 } from "react-icons/im"; 
 import React, { useState } from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaSpinner } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 
 export default function ContactPage({ ouvert }) {
   return (
@@ -83,7 +84,7 @@ function ContactEmailItem({ icon, label }) {
       setLoading(false);
       window.location.href =
         "mailto:manager.standart0306@gmail.com?subject=Demande de renseignement&body=Bonjour, je suis intéressé par vos services et j’aimerais en savoir plus. Pourriez-vous me donner plus d’informations ? Merci d’avance.";
-    }, 1200); // délai pour spinner style
+    }, 3000); // délai pour spinner style
   };
 
   return (
@@ -98,8 +99,8 @@ function ContactEmailItem({ icon, label }) {
         >
           {loading ? (
             <>
-              <FaSpinner className="animate-spin text-cyan-600" />
-              Chargement...
+             <ImSpinner10 className="animate-spin text-cyan-600"/>
+              Veuillez patientez s'il vous plait ...
             </>
           ) : (
             "manager.standart0306@gmail.com"
