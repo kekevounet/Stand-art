@@ -38,7 +38,7 @@ export default function Creation({ ouvert }) {
         'Compatible avec mobile, tablette et PC',
         'Optimisé pour la performance et le SEO',
         'Connexion sécurisée (authentification, sessions, etc.)',
-        "Interface d’administration intuitive",
+        'Interface d’administration intuitive',
         'Maintenance et mises à jour incluses',
         'Sur devis selon votre besoin',
       ],
@@ -88,9 +88,7 @@ export default function Creation({ ouvert }) {
         </div>
 
         <p className="mt-6 text-sm text-gray-700">Émerger sur internet et dans le monde pour augmenter votre visibilité et faciliter vos tâches afin de bien gérer et d’avoir le plus de clients possible.</p>
-        <p className="mt-2 font-semibold text-md text-cyan-800">Contact : Téléphone :
-
-+261 34 31 093 79 / +261 38 66 414 82</p>
+        <p className="mt-2 font-semibold text-md text-cyan-800">Contact : 034 77 917 58</p>
       </motion.div>
 
       {/* Offres */}
@@ -113,7 +111,13 @@ export default function Creation({ ouvert }) {
               href={`mailto:manager.standart0306@gmail.com?subject=Je veux un site comme ${encodeURIComponent(
                 item.title
               )}&body=${encodeURIComponent(
-                `Salut,\n\nJ'aimerais créer un site comme \"${item.title}\".\nVoici ce que j'aime :\n- ${item.description.join('\n- ')}\n\nMerci de me contacter pour en discuter !`
+                `Salut,
+
+J'aimerais créer un site comme ${item.title}.
+Voici ce que j'aime :
+- ${item.description.join('\n- ')}
+
+Merci de me contacter pour en discuter !`
               )}`}
               className="py-2 font-semibold text-center text-white transition-colors duration-200 rounded-full bg-cyan-700 hover:bg-cyan-800"
             >
