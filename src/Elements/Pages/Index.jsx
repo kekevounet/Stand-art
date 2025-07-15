@@ -1,3 +1,4 @@
+import { BsCodeSlash } from "react-icons/bs"; 
 
 // import { AiOutlineMessage } from "react-icons/ai"; 
 // import { useState } from "react";
@@ -121,6 +122,7 @@ import Commander from "./Commander";
 import Propos from "./Propos";
 import Bannieres from "../Assets/bannière.jpg";
 import Footer from "../Components/Footer";
+import { Link } from "react-router-dom";
 
 const qaPairs = [
   { question: "Quels sont vos horaires ?", answer: "Nous sommes ouverts de 7h 30 à 16h 30 du lundi au samedi." },
@@ -174,6 +176,12 @@ function Index() {
       <Propos ouvert={ouvert} />
       <Footer ouvert={ouvert} />
 
+      <div className="fixed z-40 bottom-28 right-5">
+        <Link to='/Creation' className="flex items-center justify-center p-4 transition border rounded-full shadow-md animate-bounce cursor-point bg-cyan-900 hover:scale-105">
+          <BsCodeSlash className="text-3xl text-white"/>
+        </Link>
+      </div>
+
       {/* Mini Chatbot */}
       <div className="fixed z-40 bottom-5 right-5">
         {/* Floating Button */}
@@ -195,7 +203,7 @@ function Index() {
             animate={{ opacity: 1, scale: 1 }}
             className="absolute right-0 w-[90vw] max-w-[340px] p-4 space-y-2 overflow-hidden bg-white border border-gray-300 shadow-xl bottom-20 rounded-xl"
           >
-            <h4 className="mb-2 font-semibold text-md text-cyan-800">Pose ta question :</h4>
+            <h4 className="mb-2 font-semibold text-md text-cyan-800">Question ?</h4>
             <div className="space-y-2 overflow-y-auto max-h-[280px] pr-1">
               {qaPairs.map((qa, index) => (
                 <button

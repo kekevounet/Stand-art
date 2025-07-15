@@ -1,9 +1,12 @@
+import Création1 from "./Elements/Pages/Création1";
 import { ImSpinner10 } from "react-icons/im"; 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Index from './Elements/Pages/Index';
 import { useEffect, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 export default function App()
 {
+  const location = useLocation();
   const [chargement, setChargement] = useState(true);
   useEffect(()=>
     {
@@ -21,12 +24,13 @@ export default function App()
     )
   }
   return(
-    <div className="">
-      <Router>
-        <Routes>
+    <>
+    <AnimatePresence mode='wait'>
+        <Routes location={ location } key={location.pathname}>
           <Route path='/' element={<Index />}/>
+          <Route path='/Creation' element={<Création1 />} />
         </Routes>
-      </Router>
-    </div>
+    </AnimatePresence>
+    </>
   )
 }

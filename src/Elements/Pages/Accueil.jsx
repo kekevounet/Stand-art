@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import Accueil0 from '../Assets/Accueil0.png';
 import Accueil1 from '../Assets/Accueil1.png';
 import Accueil2 from '../Assets/Accueil2.png';
-import Accueil3 from '../Assets/Accueil3.png';
+import Accueil4 from '../Assets/Accueil4.png';
 
-const images = [Accueil0, Accueil1, Accueil2, Accueil3];
+const images = [Accueil0, Accueil1, Accueil2, Accueil4];
 
 const texts = [
     {
         title: "Bienvenue chez STAND’ART",
-        description: "Des textures qui inspirent, des outils qui boostent, des sites qui brillent, un service qui dépanne — ta réussite, notre mission."
+        description: "Des textures qui inspirent, des outils qui boostent, des sites qui brillent, un service qui dépanne — votre réussite, notre mission."
     },
     {
         title: "Tenues Professionnelles",
@@ -21,7 +21,7 @@ const texts = [
     },
     {
         title: "Création digitales",
-        description: "Site ou application web, logiciel , mobile"
+        description: "Site ou application web , application mobile"
     }
 ];
 
@@ -111,3 +111,38 @@ export default function Accueil({ ouvert }) {
         </section>
     );
 }
+
+
+// import Accueil5 from '../Assets/Accueil5.png'
+// import Accueil6 from '../Assets/Accueil6.png'
+// import logo1 from '../Assets/Logo1.png'
+// export default function Form4()
+// {
+//     return(
+//         <div className="flex items-center justify-between w-full h-screen bg-slate-800">
+
+//             <div className="flex flex-col justify-between w-full h-full">
+//                 <div className="relative w-full h-full border-b border-r">
+//                     <img src={Accueil6} alt="" className='absolute w-full h-full'/>
+//                 </div>
+//                 <div className="w-full h-full border-t border-r">
+//                     <div className="relative w-full h-full border-b border-r">
+//                         <img src={Accueil5} alt="" className='absolute w-full h-full'/>
+//                     </div>
+//                 </div>
+//             </div>
+            
+//             <div className="flex flex-col justify-between w-full h-full">
+//                 <div className="w-full h-full border-b border-l">
+                    
+//                 </div>
+//                 <div className="w-full h-full border-t border-l"></div>
+//             </div>
+
+//             <div className="absolute border w-96 flex rounded-full justify-center items-center h-96 top-[30%] shadow-[0px_0px_5px_white] left-[40%] z-40  bg-slate-800 overflow-hidden">
+//                 <img src={logo1} alt="" />
+//             </div>
+
+//         </div>
+//     )
+// }

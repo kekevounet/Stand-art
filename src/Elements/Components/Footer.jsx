@@ -8,10 +8,10 @@ export default function Footer({ouvert})
             {/* Footer 1 */}
             <div className="w-full shadow-md h-[80%] bg-white p-3 flex flex-col justify-around items-center gap-3 lg:flex-row">
                 <div className="w-full h-full p-1 lg:p-0">
-                    <h3 className='text-center'>Stand'art</h3>
+                    <h3 className='text-center'>Stand'Art</h3>
                     <hr />
                     <div className="flex items-center justify-center w-full h-[75%]">
-                        <h4>« Des textures qui inspirent, des outils qui boostent, des sites qui brillent, un service qui dépanne — ta réussite, notre mission. »</h4>
+                        <h4>« Des textures qui inspirent, des outils qui boostent, des sites qui brillent, un service qui dépanne — votre réussite, notre mission. »</h4>
                     </div>
                 </div>
                 <div className="w-full h-full p-1 lg:p-0">
@@ -43,7 +43,7 @@ export default function Footer({ouvert})
                 style={{ backgroundImage: `url(${FondNav})` }}
             >
 
-            <h4 className='mr-20 text-base lg:text-lg lg:mr-0'><strong>&copy; Stand'art. </strong>Tous droits réservés.</h4>
+            <h4 className='mr-20 text-base lg:text-lg lg:mr-0'><strong>&copy; Stand'Art. </strong>Tous droits réservés.</h4>
             
             <div className="absolute flex justify-end w-full h-20 mr-0 lg:mr-28" >
               <img src={Logo} alt="" className='scale-75 animate-pulse lg:scale-100' />

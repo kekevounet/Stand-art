@@ -28,7 +28,7 @@ export default function Commander()
                     <label htmlFor="Choix" className="text-lg tracking-wide fon-bold">Choisissez l'offre qui vous convient</label>
                     <div className="flex justify-between w-full">
                         <select className="w-full p-2 mr-1 font-semibold text-center bg-transparent border rounded-lg cursor-pointer outline-1" required>
-                            <option value="" onClick={()=>setIsWeb(false)}>---------------------------- Selectionnez ----------------------------</option>
+                            <option value="" onClick={()=>setIsWeb(false)}>------------------- Selectionnez --------------------</option>
                             <option value="" onClick={() =>setIsWeb(false)}>Vêtement</option>
                             <option value="" onClick={() =>setIsWeb(false)}>Matériel & Fourniture</option>
                             <option value="" onClick={() =>setIsWeb(true)}>Création site web</option>
