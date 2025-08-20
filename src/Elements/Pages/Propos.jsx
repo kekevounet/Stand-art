@@ -1,46 +1,42 @@
-import React from "react";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { FaBrain } from "react-icons/fa";
+import Home from "./About/Home";
+import Competences from "./About/Compétences";
+import { Parallax } from 'react-scroll-parallax';
+import Choix from '../Pages/About/Choix';
+import Logo from '../Assets/Logo20.png';
 
-export default function Propos({ ouvert }) {
+export default function Propos() {
+
   return (
-    <section
-      id="Propos"
-      className={`min-h-screen py-20 px-6 bg-white text-black font-sans ${
-        ouvert ? "blur-sm lg:blur-none" : "blur-none"
-      }`}
-    >
-      <div className="max-w-5xl p-10 mx-auto bg-white shadow-2xl lg:p-16 bg-opacity-10 backdrop-blur-lg rounded-3xl">
-        <h1 className="mb-12 text-3xl font-extrabold tracking-wide text-center lg:text-5xl drop-shadow-md">
-          À propos de <span className="text-cyan-700">Stand'Art</span>
-        </h1>
+    <div className="" id="Propos">
+      <Home />
 
-        <div className="max-w-3xl mx-auto space-y-8 text-base leading-relaxed lg:text-lg">
-          <p className="transition-opacity duration-300 opacity-90 hover:opacity-100">
-            Chez <span className="font-semibold text-cyan-500">Stand'Art</span>, nous tissons bien plus que des textures : nous créons des styles uniques qui reflètent votre personnalité.  
-            Que ce soit pour des vêtements comme des t-shirts, sweats ou pantalons, chaque détail est pensé pour vous démarquer.
-          </p>
+      <div
+        className="w-full h-[70vh] bg-white p-2 bg-fixed inset-0 flex justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500"
+        style={{ backgroundImage: `url(${Logo})` }}
+      ></div>
 
-          <p className="transition-opacity duration-300 opacity-90 hover:opacity-100">
-            Nous proposons également du matériel de bureau et des accessoires conçus pour optimiser votre productivité tout en stylisant votre espace de travail.
-          </p>
-
-          <p className="transition-opacity duration-300 opacity-90 hover:opacity-100">
-            Notre équipe développe des sites web modernes, rapides et intuitifs, des vitrines digitales conçues pour booster votre présence en ligne et conquérir de nouveaux marchés.
-          </p>
-
-          <p className="transition-opacity duration-300 opacity-90 hover:opacity-100">
-            Et lorsque la technologie vous fait défaut, nous assurons un dépannage logiciel efficace, rapide et sans stress, pour que vous puissiez rester concentré sur l’essentiel.
-          </p>
-
-          <blockquote className="pl-8 mt-12 text-2xl italic border-l-8 text-cyan-700 border-cyan-400 drop-shadow-md">
-            « Des textures qui inspirent, des outils qui boostent, des sites qui brillent, un service qui dépanne — votre réussite, notre priorité. »
-          </blockquote>
-
-          <p className="mt-12 text-xl font-semibold tracking-wide text-center text-cyan-600">
-            Rejoignez <span className="font-extrabold text-cyan-500">Stand'Art</span>,  
-            là où chaque détail transforme votre univers en succès.
-          </p>
-        </div>
+      <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row-reverse justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond4">
+        <Parallax speed={-25} rotate={[-10, 10]} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:mr-20">COMPETENCE</Parallax>
+        <Parallax speed={-25} rotate={[10, -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20"><FaBrain /></Parallax>
       </div>
-    </section>
+
+      <Competences />
+
+      <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond1">
+        <Parallax speed={-25} rotate={[10, -10]} className="text-white text-4xl lg:text-7xl font-extrabold tracking-widest lg:ml-20">Pourquoi nous choisir?</Parallax>
+        <Parallax speed={-25} rotate={[10, -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20 lg:ml-0"><AiFillCheckCircle /></Parallax>
+      </div>
+
+      <Choix />
+
+      <div
+        className="w-full h-[70vh] bg-white p-2 bg-fixed inset-0 flex justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500"
+        style={{ backgroundImage: `url(${Logo})` }}
+      ></div>
+
+
+    </div>
   );
 }

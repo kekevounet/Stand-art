@@ -1,6 +1,6 @@
-import { BsCodeSlash } from "react-icons/bs"; 
+import { BsCodeSlash } from "react-icons/bs";
 
-// import { AiOutlineMessage } from "react-icons/ai"; 
+// import { AiOutlineMessage } from "react-icons/ai";
 // import { useState } from "react";
 // import { motion } from 'framer-motion';
 // import NavBar from "../Components/NavBar";
@@ -108,7 +108,7 @@ import { BsCodeSlash } from "react-icons/bs";
 //   );
 // }
 import { AiOutlineMessage } from "react-icons/ai";
-import { BiDownArrowCircle } from "react-icons/bi"; 
+import { BiDownArrowCircle } from "react-icons/bi";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import NavBar from "../Components/NavBar";
@@ -123,6 +123,8 @@ import Propos from "./Propos";
 import Bannieres from "../Assets/bannière.jpg";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
+import { Parallax } from "react-scroll-parallax";
+import { MdContacts } from "react-icons/md";
 
 const qaPairs = [
   { question: "Quels sont vos horaires ?", answer: "Nous sommes ouverts de 7h 30 à 16h 30 du lundi au samedi." },
@@ -169,6 +171,12 @@ function Index() {
       <Banniere />
       <Choix ouvert={ouvert} />
       <Banniere />
+
+      <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond3">
+        <Parallax speed={-25} rotate={[10, -10]} className="text-white text-4xl lg:text-8xl font-extrabold tracking-widest lg:ml-20">Contact</Parallax>
+        <Parallax speed={-25} rotate={[10, -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20 lg:ml-0"><MdContacts /></Parallax>
+      </div>
+
       <Contact ouvert={ouvert} />
       <Banniere />
       <Commander ouvert={ouvert} />
