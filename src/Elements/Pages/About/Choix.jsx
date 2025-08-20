@@ -82,9 +82,9 @@ export default function Choix() {
   return (
     <section className="w-full bg-white text-gray-800 py-12 overflow-auto" id="Choix">
       <div className="text-center mb-8 px-4">
-        <h2 className="text-4xl font-bold mb-4">Pourquoi nous choisir ?</h2>
+        <h2 className="text-4xl font-bold mb-4">Nous proposons une large gamme de produits.</h2>
         <p className="max-w-3xl mx-auto text-lg text-gray-600">
-          Notre expertise allie qualité, réactivité et créativité. Que ce soit pour vos vêtements professionnels, vos projets d'impression ou vos besoins en matériel informatique, nous vous accompagnons avec sérieux et passion.
+          Nous vous proposons une vaste sélection de produits de qualité pour répondre à tous vos besoins. Notre gamme diversifiée garantit que vous trouverez la solution parfaite pour vous, que ce soit pour un usage personnel ou professionnel.
         </p>
       </div>
 

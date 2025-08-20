@@ -25,7 +25,7 @@ export default function Propos() {
       <Competences />
 
       <div className="w-full h-[40vh] lg:h-[70vh] bg-white p-2 bg-fixed overflow-hidden inset-0 flex lg:flex-row justify-center lg:justify-between bg-contain bg-no-repeat bg-center items-center text-blue-500 fond1">
-        <Parallax speed={-25} rotate={[10, -10]} className="text-white text-4xl lg:text-7xl font-extrabold tracking-widest lg:ml-20">Pourquoi nous choisir?</Parallax>
+        <Parallax speed={-25} rotate={[10, -10]} className="text-white text-4xl lg:text-7xl font-extrabold tracking-widest lg:ml-20">Gamme complète.</Parallax>
         <Parallax speed={-25} rotate={[10, -10]} className="text-white text-3xl lg:text-8xl font-extrabold tracking-widest ml-20 lg:mr-20 lg:ml-0"><AiFillCheckCircle /></Parallax>
       </div>
 
