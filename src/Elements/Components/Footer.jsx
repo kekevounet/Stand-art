@@ -31,7 +31,7 @@ export default function Footer({ouvert})
                     </div>
                 </div>
                 <div className="flex items-center justify-end w-full h-full px-5">
-                    <a className="w-[75%] overflow-hidden h-full relative" href='https://niavo-kevin.netlify.app' target='_blank' rel='noopener noreferrer' title='Niavo Kevin'>
+                    <a className="w-[75%] overflow-hidden h-full relative" href='https://niavo.netlify.app' target='_blank' rel='noopener noreferrer' title='Niavo Kevin'>
                         <img src={me} alt="Information" className='absolute object-contain w-full h-full' />
                     </a>
                 </div>
